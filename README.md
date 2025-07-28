@@ -73,13 +73,13 @@ This example, unmodified, will run the create a `report.md` file with the output
 
 My resume-automation-suite Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
-The system uses five specialized AI agents:
+**The system uses five specialized AI agents:**
 
-  1. Job Analyzer: Extracts and analyzes job requirements
-  2. Resume Analyzer: Scores resume match and suggests improvements
-  3. Company Researcher: Gathers company information for interviews
-  4. Resume Writer: Gives out the optimized resume
-  5. Final report generator: Generates a summarised final report based on given resume and comapny job profile
+  1. **Job Analyzer:** Extracts and analyzes job requirements
+  2. **Resume Analyzer:** Scores resume match and suggests improvements
+  3. **Company Researcher:** Gathers company information for interviews
+  4. **Resume Writer:** Gives out the optimized resume
+  5. **Final report generator:** Generates a summarised final report based on given resume and comapny job profile
 
 ## Support
 
