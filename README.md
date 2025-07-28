@@ -28,10 +28,10 @@ cd Resume-automation-suite
 ```
 3. Setup a virtual python environment (if you don't already have one or don't know how to make one)
 
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
    
 4. Lock the dependencies (this will happen automatically as you run this command) and install them by using the CLI command:
 
