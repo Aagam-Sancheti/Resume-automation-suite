@@ -1,0 +1,191 @@
+analyze_job_task:
+  description: >
+    Analyze the {job_url} description and score the candidate's fit based on their resume.
+    You MUST calculate actual match scores and provide detailed scoring analysis.
+    Output will be saved as structured JSON data.
+
+    1. Extract Job Requirements:
+       - Technical skills (required vs nice-to-have)
+       - Soft skills
+       - Experience levels
+       - Education requirements
+       - Industry knowledge
+
+    2. Analyze Resume Against Requirements:
+       - Read and analyze the provided resume thoroughly
+       - Identify candidate's skills, experience, and qualifications
+       - Compare candidate profile against job requirements
+
+    3. Calculate Technical Skills Match (35% of total):
+       - For each required technical skill:
+         * Match Level (0-1): How well does candidate's experience match?
+         * Years Experience: Compare to required years
+         * Context Score: How relevant is their usage of the skill?
+       - Calculate weighted average based on skill importance
+       - Provide detailed skill_details array with individual skill scores
+
+    4. Calculate Soft Skills Match (20% of total):
+       - Identify soft skills from resume
+       - Compare against job requirements
+       - Consider context and demonstration of skills
+       - Score each soft skill individually
+
+    5. Calculate Experience Match (25% of total):
+       - Years of relevant experience
+       - Role similarity
+       - Industry relevance
+       - Project scope and complexity
+
+    6. Calculate Education Match (10% of total):
+       - Degree level match
+       - Field of study relevance
+       - Additional certifications
+
+    7. Calculate Industry Knowledge Match (10% of total):
+       - Years in similar industry
+       - Domain expertise
+       - Industry-specific achievements
+
+    8. Calculate Overall Match Score:
+       - Weighted average of all components
+       - Identify key strengths and gaps
+       - Provide detailed scoring explanation
+
+    IMPORTANT: The candidate's resume is available in the knowledge/software-engineer-resume-example.pdf file.
+    You MUST read and analyze this resume to calculate accurate match scores.
+    Do not make assumptions about the candidate's skills - use the actual resume content.
+
+  expected_output: >
+    Structured JSON data containing job analysis and scoring details according to
+    the JobRequirements model schema. Only return valid JSON. Do not include any explanation, text, or notes outside the JSON.
+  agent: job_analyzer
+
+optimize_resume_task:
+  description: >
+    Review the provided resume (knowledge/software-engineer-resume-example.pdf) against the job analysis and create structured optimization suggestions.
+    Output will be saved as structured JSON data.
+
+    1. Content Analysis:
+       - Compare resume content with job requirements
+       - Identify missing keywords and skills
+       - Analyze achievement descriptions
+       - Check for ATS compatibility
+
+    2. Structure Review:
+       - Evaluate section organization
+       - Check formatting consistency
+       - Assess information hierarchy
+       - Verify contact details
+
+    3. Generate Suggestions:
+       - Content improvements with before/after examples
+       - Skills to highlight based on job match
+       - Achievements to add or modify
+       - ATS optimization recommendations
+
+  expected_output: >
+    Structured JSON data containing detailed optimization suggestions according to
+    the ResumeOptimization model schema. Only return valid JSON. Do not include any explanation, text, or notes outside the JSON.
+  agent: resume_analyzer
+  context: [analyze_job_task]
+
+research_company_task:
+  description: >
+    Research {company_name} and provide a simple analysis focusing on recent news and company culture.
+    Keep the research focused and concise.
+
+    1. Company Overview:
+       - Recent developments (last 6 months)
+       - Company culture and values
+       - Market position
+
+    2. Interview Preparation:
+       - 3-5 common interview questions
+       - Key company-specific topics to discuss
+
+  expected_output: >
+    Structured JSON data containing company research results according to
+    the CompanyResearch model schema. Only return valid JSON. Do not include any explanation, text, or notes outside the JSON.
+  agent: company_researcher
+  context: [analyze_job_task, optimize_resume_task]
+
+generate_resume_task:
+  description: >
+    Using the optimization suggestions and job analysis from previous steps, 
+    create a polished resume in markdown format.
+    Do not add markdown code blocks like '```'.
+
+    1. Content Integration:
+       - Incorporate optimization suggestions
+       - Add missing keywords and skills
+       - Enhance achievement descriptions
+       - Ensure ATS compatibility
+
+    2. Formatting:
+       - Use proper markdown headers (#, ##, ###)
+       - Apply consistent styling
+       - Create clear section hierarchy
+       - Use bullet points effectively
+
+    3. Documentation:
+       - Track changes made
+       - Note preserved elements
+       - Explain optimization choices
+
+  expected_output: >
+    A beautifully formatted markdown resume document that:
+    - Incorporates all optimization suggestions
+    - Uses proper markdown formatting
+    - Is ATS-friendly
+    - Documents all changes made
+  agent: resume_writer
+  context: [optimize_resume_task, analyze_job_task, research_company_task]
+
+generate_report_task:
+  description: >
+    Create an executive summary report using data from previous steps. 
+    Format in markdown without code blocks '```'.
+
+    1. Data Integration:
+       - Job analysis and scores
+       - Resume optimization details
+       - Company research insights
+       - Final resume changes
+
+    2. Report Sections:
+       ## Executive Summary
+       - Overall match score and quick wins
+       - Key strengths and improvement areas
+       - Action items priority list
+
+       ## Job Fit Analysis
+       - Detailed score breakdown
+       - Skills match assessment
+       - Experience alignment
+
+       ## Optimization Overview
+       - Key resume improvements
+       - ATS optimization results
+       - Impact metrics
+
+       ## Company Insights
+       - Culture fit analysis
+       - Interview preparation tips
+       - Key talking points
+
+       ## Next Steps
+       - Prioritized action items
+       - Skill development plan
+       - Application strategy
+
+    3. Formatting:
+       - Use proper markdown headers
+       - Include relevant emojis
+       - Create tables where appropriate
+       - Use bullet points for scannability
+
+  expected_output: >
+    A comprehensive markdown report that combines all analyses into an
+    actionable, clear document with concrete next steps.
+  agent: report_generator
+  context: [analyze_job_task, optimize_resume_task, research_company_task]
