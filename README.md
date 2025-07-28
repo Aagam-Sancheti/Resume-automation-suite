@@ -1,6 +1,13 @@
 # Resume-automation Crew (Using CrewAI)
 Welcome to the my Resume-automation Crew project, made using CrewAI.
 This tool is designed to help you tailor and optimize your Resume according to company's job profile.
+
+<img width="1280" height="800" alt="Screenshot 2025-07-28 at 3 54 15 PM" src="https://github.com/user-attachments/assets/93c51c55-b0e2-48d0-9b25-71bbb8b6109a" />
+
+<img width="1280" height="800" alt="Screenshot 2025-07-28 at 3 53 41 PM" src="https://github.com/user-attachments/assets/0b673293-217d-40bf-996c-be8711fd4152" />
+
+<img width="1280" height="800" alt="Screenshot 2025-07-28 at 3 53 22 PM" src="https://github.com/user-attachments/assets/9238c989-34e5-475f-9a65-913887273e62" />
+
 <img width="1243" height="632" alt="Screenshot 2025-07-28 at 9 12 22 PM" src="https://github.com/user-attachments/assets/5d347e14-57a4-43b2-95bc-3aa7dfa2047b" />
   
 ## How it'll help you:
