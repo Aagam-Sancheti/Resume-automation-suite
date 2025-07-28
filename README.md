@@ -6,9 +6,9 @@ This tool is designed to help you tailor and optimize your Resume according to c
   
 ## How it'll help you:
 
-**Job Analysis:** Analyzes what skills and qualifications are required for this job.
-**Resume Matching:** Grades the resume and checks whether the resume is relavant to job or not. Thus suggesting improvements.
-**Company researcher:** Gathers company insights, a brief background check and provides potential interview questions.
+**Job Analysis:** Analyzes what skills and qualifications are required for this job.  
+**Resume Matching:** Grades the resume and checks whether the resume is relavant to job or not. Thus suggesting improvements.  
+**Company researcher:** Gathers company insights, a brief background check and provides potential interview questions.   
 
 ## Installation
 
