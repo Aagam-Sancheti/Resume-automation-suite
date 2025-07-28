@@ -11,6 +11,7 @@ This tool is designed to help you tailor and optimize your Resume according to c
 
 ## Installation
 
+I'll assume you have crewAI installed. if not download it using instructions from here https://docs.crewai.com/en/installation
 Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
 1. First, if you haven't already, install uv:
