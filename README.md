@@ -1,8 +1,18 @@
-# ResumeCrew Crew
+# Resume-automation Crew (Using CrewAI)
 
-Welcome to the ResumeCrew Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the my Resume-automation Crew project, made using CrewAI.
+This tool is designed to help you tailor and optimize your Resume according to company's job profile.
+
+<img width="1243" height="632" alt="Screenshot 2025-07-28 at 9 12 22 PM" src="https://github.com/user-attachments/assets/5d347e14-57a4-43b2-95bc-3aa7dfa2047b" />
+  
+## How it'll help you:
+
+**Job Analysis:** Analyzes what skills and qualifications are required for this job.
+**Resume Matching:** Grades the resume and checks whether the resume is relavant to job or not. Thus suggesting improvements.
+**Company researcher:** Gathers company insights, a brief background check and provides potential interview questions
 
 ## Installation
+----
 
 Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
@@ -12,7 +22,8 @@ First, if you haven't already, install uv:
 pip install uv
 ```
 
-Next, navigate to your project directory and install the dependencies:
+Next, Clone this project repository and install the dependencies:
+>
 
 (Optional) Lock the dependencies and install them by using the CLI command:
 
