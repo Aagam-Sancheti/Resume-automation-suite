@@ -91,24 +91,27 @@ optimize_resume_task:
 
 research_company_task:
   description: >
-    Research {company_name} and provide a simple analysis focusing on recent news and company culture.
-    Keep the research focused and concise.
+    Research {company_name} and prepare the latest (year 2025) and comprehensive analysis.
+    Output will be saved as structured JSON data.
 
     1. Company Overview:
-       - Recent developments (last 6 months)
-       - Company culture and values
+       - Recent developments and news
+       - Culture and values
        - Market position
+       - Growth trajectory
 
     2. Interview Preparation:
-       - 3-5 common interview questions
-       - Key company-specific topics to discuss
+       - Common interview questions
+       - Company-specific topics
+       - Recent projects or initiatives
+       - Key challenges and opportunities
 
   expected_output: >
     Structured JSON data containing company research results according to
     the CompanyResearch model schema. Only return valid JSON. Do not include any explanation, text, or notes outside the JSON.
   agent: company_researcher
   context: [analyze_job_task, optimize_resume_task]
-
+  
 generate_resume_task:
   description: >
     Using the optimization suggestions and job analysis from previous steps, 
