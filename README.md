@@ -1,4 +1,4 @@
-# Resume-automation Crew (Using CrewAI)
+# Resume-automation Suite (Using CrewAI)
 Welcome to the my Resume-automation Crew project, made using CrewAI.
 This tool is designed to help you tailor and optimize your Resume according to company's job profile.
 
