@@ -56,7 +56,7 @@ cp .env.example .env
 
 2.Add your API keys to .env:
 * Required:
-  + OPENAI_API_KEY: OpenAI API key
+  + GEMINI_API_KEY: Gemini API key
   + SERPER_API_KEY: Serper API key for web search
 
 **Note**: For Gemini models, use the model name without prefix (e.g., `gemini-2.0-flash`)
