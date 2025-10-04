@@ -86,7 +86,7 @@ My resume-automation-suite Crew is composed of multiple AI agents, each with uni
   2. **Resume Analyzer:** Scores resume match and suggests improvements
   3. **Company Researcher:** Gathers company information for interviews
   4. **Resume Writer:** Gives out the optimized resume
-  5. **Final report generator:** Generates a summarised final report based on given resume and comapny job profile
+  5. **Final report generator:** Generates a summarised final report based on given resume and company job profile
 
 ## Support
 
